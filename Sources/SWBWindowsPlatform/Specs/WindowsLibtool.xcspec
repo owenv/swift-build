@@ -53,6 +53,11 @@
                 DefaultValue = YES;
             },
             {
+                Name = "LIBTOOL_EXTRACT_ARCHIVE_INPUTS";
+                Type = Boolean;
+                DefaultValue = YES;
+            },
+            {
                 Name = __INPUT_FILE_LIST_PATH__;
                 Type = Path;
                 Condition = "$(LIBTOOL_USE_RESPONSE_FILE)";
