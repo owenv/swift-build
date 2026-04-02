@@ -71,6 +71,7 @@ extension SpecificationsExtension {
     public func specificationSearchPaths(resourceSearchPaths: [Path]) -> [URL] { [] }
 
     public func findResourceBundle(nameWhenInstalledInToolchain: String, resourceSearchPaths: [Path], defaultBundle: @autoclosure () -> Bundle?) -> Bundle? {
+        print("FINDING RESOURCE BUNDLES: \(nameWhenInstalledInToolchain) \(resourceSearchPaths)")
         for searchPath in resourceSearchPaths {
             for bundleBasename in ["\(nameWhenInstalledInToolchain).bundle", "\(nameWhenInstalledInToolchain).resources"] {
                 if let bundle = Bundle(path: searchPath.join(bundleBasename).str) {
